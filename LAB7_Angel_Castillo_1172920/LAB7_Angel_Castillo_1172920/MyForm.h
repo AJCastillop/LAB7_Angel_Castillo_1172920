@@ -25,6 +25,11 @@ namespace LAB7AngelCastillo1172920 {
 
 		int *arreglo;
 
+	public:
+
+	public:
+		int* arreglo2;
+
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -117,7 +122,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabControl1->Location = System::Drawing::Point(12, 12);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(484, 502);
+			this->tabControl1->Size = System::Drawing::Size(513, 502);
 			this->tabControl1->TabIndex = 0;
 			// 
 			// tabPage1
@@ -126,7 +131,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabPage1->Location = System::Drawing::Point(4, 22);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(476, 476);
+			this->tabPage1->Size = System::Drawing::Size(505, 476);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Ejercicio 1";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -152,7 +157,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->groupBox1->Controls->Add(this->lbArray);
 			this->groupBox1->Location = System::Drawing::Point(6, 15);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(464, 455);
+			this->groupBox1->Size = System::Drawing::Size(488, 455);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			// 
@@ -258,6 +263,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnHash->TabIndex = 6;
 			this->btnHash->Text = L"Buscar";
 			this->btnHash->UseVisualStyleBackColor = true;
+			this->btnHash->Click += gcnew System::EventHandler(this, &MyForm::btnHash_Click);
 			// 
 			// btnBinaria
 			// 
@@ -267,6 +273,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnBinaria->TabIndex = 5;
 			this->btnBinaria->Text = L"Buscar";
 			this->btnBinaria->UseVisualStyleBackColor = true;
+			this->btnBinaria->Click += gcnew System::EventHandler(this, &MyForm::btnBinaria_Click);
 			// 
 			// btnArray
 			// 
@@ -307,7 +314,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(476, 476);
+			this->tabPage2->Size = System::Drawing::Size(505, 476);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -316,7 +323,7 @@ namespace LAB7AngelCastillo1172920 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(515, 523);
+			this->ClientSize = System::Drawing::Size(534, 523);
 			this->Controls->Add(this->tabControl1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -348,10 +355,12 @@ namespace LAB7AngelCastillo1172920 {
 		   {
 			   srand(time(NULL));
 			   arreglo = new int [size];
+			   arreglo2 = new int[size];
 
 			   for (int i = 0; i < size; i++) {
 				   int numero = rand() % (10*size);
 				   arreglo[i] = numero;
+				   arreglo2[i] = numero;
 				   insertinHash(numero, size);
 			   }
 			   fillTable();
@@ -406,6 +415,43 @@ namespace LAB7AngelCastillo1172920 {
 
 		   }
 
+		   void shellSort(int length)
+		   {
+			   int index, i;
+			   bool isMayor = false;
+
+			   index = length;
+
+			   while (index > 1)
+			   {
+				   index = index / 2;
+				   isMayor = true;
+
+				   while (isMayor == true)
+				   {
+					   isMayor = false;
+					   i = 0;
+					   while (index + i < length)
+					   {
+						   if (arreglo2[i] > arreglo2[index + i])
+						   {
+							   swap(i, index + i);
+							   isMayor = true;
+						   }
+						   i++;
+					   }
+
+				   }
+			   }
+
+		   }
+		   void swap(int i, int j)
+		   {
+			   int temp = arreglo2[i];
+			   arreglo2[i] = arreglo2[j];
+			   arreglo2[j] = temp;
+		   }
+
 		   int claveHash(int n, int size)
 		   {
 			   int clave;
@@ -452,6 +498,75 @@ namespace LAB7AngelCastillo1172920 {
 			   return -1;
 		   }
 
+		   int Binario(int numero, int size)
+		   {
+			   int first = 0;
+			   int last = size - 1;
+			   int medio;
+			   while (first <= last) {
+				   medio = (first + last) / 2;
+				   if (arreglo2[medio] == numero) {
+					   return medio;
+				   }
+				   else
+				   {
+					   if (arreglo2[medio] > numero) 
+					   {
+						   last = medio - 1;
+					   }
+					   else 
+					   {
+						   first = medio + 1;
+					   }
+				   }
+			   }
+			   return -1;
+		   }
+
+		   int busquedaHash(int n, int size)
+		   {
+			   int i = 0;
+			   int clave = claveHash(n, size);
+			   while (i < size)
+			   {
+
+				   if (newHash[clave] == n)
+				   {
+					   MessageBox::Show("Vete alv un uxas");
+				   }
+				   else
+				   {
+					   if (i == 0)
+					   {
+						   if (clave > 0)
+							   clave = claveHash(n + clave, size);
+						   else
+						   {
+							   clave = claveHash(size + n + i, size);
+							   i++;
+						   }
+					   }
+					   else
+					   {
+						   if (clave > 0)
+						   {
+							   clave = claveHash((n + clave) ^ i, size);
+							   i++;
+						   }
+
+						   else
+						   {
+							   clave = claveHash((size + n + i) ^ 2, size);
+							   i++;
+						   }
+
+					   }
+				   }
+			   }
+			   
+			   return -1;
+
+		   }
 private: System::Void btnSecuencial_Click(System::Object^ sender, System::EventArgs^ e) {
 	Stopwatch^ time = gcnew Stopwatch();
 	try
@@ -459,22 +574,86 @@ private: System::Void btnSecuencial_Click(System::Object^ sender, System::EventA
 		time->Start();
 		int search = Convert::ToInt32(txtSecuencial->Text);
 		int searched = secuencial(search, newHash->Count);
+		
 		if (searched == -1)
 		{
-			MessageBox::Show("No se encontro el numero", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			time->Stop();
+			lbl1->Text = Convert::ToString(time->Elapsed);
+			MessageBox::Show("No se encontró el número", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		else
 		{
+			time->Stop();
+			lbl1->Text = Convert::ToString(time->Elapsed);
 			MessageBox::Show("El número se encontró en la posición: " + searched, "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
-		time->Stop();
-		lbl1->Text = Convert::ToString(time->Elapsed);
+		
 
 	}
 	catch (Exception^ e)
 	{
 		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
+}
+private: System::Void btnBinaria_Click(System::Object^ sender, System::EventArgs^ e) {
+	Stopwatch^ time = gcnew Stopwatch();
+
+	try
+	{
+		time->Start();
+		int search = Convert::ToInt32(txtBinaria->Text);
+		shellSort(newHash->Count);
+		int searched = Binario(search, newHash->Count);
+		if (searched == -1)
+		{
+			time->Stop();
+			lbl2->Text = Convert::ToString(time->Elapsed);
+			MessageBox::Show("No se encontró el número", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else
+		{
+			time->Stop();
+			lbl2->Text = Convert::ToString(time->Elapsed);
+			MessageBox::Show("El número se encontró en la posición: " + searched + " del arreglo ordenado", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		
+
+	}
+	catch (Exception^ e)
+	{
+		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
+private: System::Void btnHash_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	Stopwatch^ time = gcnew Stopwatch();
+
+	try
+	{
+		time->Start();
+		int search = Convert::ToInt32(txtHash->Text);
+		int searched = busquedaHash(search, newHash->Count);
+		if (searched == -1)
+		{
+			time->Stop();
+			lbl3->Text = Convert::ToString(time->Elapsed);
+			MessageBox::Show("No se encontró el número", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else
+		{
+			time->Stop();
+			lbl3->Text = Convert::ToString(time->Elapsed);
+			MessageBox::Show("El número se encontró en la posición: " + searched + " del arreglo ordenado", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+
+
+	}
+	catch (Exception^ e)
+	{
+		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+
 }
 };
 }
