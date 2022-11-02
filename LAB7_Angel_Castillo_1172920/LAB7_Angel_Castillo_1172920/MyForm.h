@@ -24,6 +24,12 @@ namespace LAB7AngelCastillo1172920 {
 	public:
 
 		int *arreglo;
+	private: System::Windows::Forms::Label^ label11;
+	public:
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ lbl3;
+	private: System::Windows::Forms::TextBox^ txtHash;
+	private: System::Windows::Forms::Button^ btnHash;
 
 	public:
 
@@ -59,21 +65,21 @@ namespace LAB7AngelCastillo1172920 {
 
 	private: System::Windows::Forms::ListBox^ lbArray;
 	private: System::Windows::Forms::TabPage^ tabPage2;
-	private: System::Windows::Forms::Label^ label11;
+
 	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label9;
+
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ lbl1;
 	private: System::Windows::Forms::Label^ lbl2;
-	private: System::Windows::Forms::Label^ lbl3;
 
 
 
-	private: System::Windows::Forms::TextBox^ txtHash;
+
+
 	private: System::Windows::Forms::TextBox^ txtBinaria;
 	private: System::Windows::Forms::TextBox^ txtSecuencial;
 	private: System::Windows::Forms::Button^ btnSecuencial;
-	private: System::Windows::Forms::Button^ btnHash;
+
 	private: System::Windows::Forms::Button^ btnBinaria;
 
 	private:
@@ -92,24 +98,24 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->lbl1 = (gcnew System::Windows::Forms::Label());
 			this->lbl2 = (gcnew System::Windows::Forms::Label());
-			this->lbl3 = (gcnew System::Windows::Forms::Label());
-			this->txtHash = (gcnew System::Windows::Forms::TextBox());
 			this->txtBinaria = (gcnew System::Windows::Forms::TextBox());
 			this->txtSecuencial = (gcnew System::Windows::Forms::TextBox());
 			this->btnSecuencial = (gcnew System::Windows::Forms::Button());
-			this->btnHash = (gcnew System::Windows::Forms::Button());
 			this->btnBinaria = (gcnew System::Windows::Forms::Button());
 			this->btnArray = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->txtArray = (gcnew System::Windows::Forms::TextBox());
 			this->lbArray = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->lbl3 = (gcnew System::Windows::Forms::Label());
+			this->btnHash = (gcnew System::Windows::Forms::Button());
+			this->txtHash = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -161,15 +167,6 @@ namespace LAB7AngelCastillo1172920 {
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(3, 117);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(109, 13);
-			this->label11->TabIndex = 19;
-			this->label11->Text = L"Búsqueda secuencial";
-			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
@@ -178,15 +175,6 @@ namespace LAB7AngelCastillo1172920 {
 			this->label10->Size = System::Drawing::Size(89, 13);
 			this->label10->TabIndex = 18;
 			this->label10->Text = L"Búsqueda binaria";
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(3, 286);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(99, 13);
-			this->label9->TabIndex = 17;
-			this->label9->Text = L"Búsqueda por hash";
 			// 
 			// label8
 			// 
@@ -215,22 +203,6 @@ namespace LAB7AngelCastillo1172920 {
 			this->lbl2->TabIndex = 12;
 			this->lbl2->Text = L"---";
 			// 
-			// lbl3
-			// 
-			this->lbl3->AutoSize = true;
-			this->lbl3->Location = System::Drawing::Point(183, 317);
-			this->lbl3->Name = L"lbl3";
-			this->lbl3->Size = System::Drawing::Size(16, 13);
-			this->lbl3->TabIndex = 11;
-			this->lbl3->Text = L"---";
-			// 
-			// txtHash
-			// 
-			this->txtHash->Location = System::Drawing::Point(6, 312);
-			this->txtHash->Name = L"txtHash";
-			this->txtHash->Size = System::Drawing::Size(90, 20);
-			this->txtHash->TabIndex = 9;
-			// 
 			// txtBinaria
 			// 
 			this->txtBinaria->Location = System::Drawing::Point(6, 234);
@@ -254,16 +226,6 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnSecuencial->Text = L"Buscar";
 			this->btnSecuencial->UseVisualStyleBackColor = true;
 			this->btnSecuencial->Click += gcnew System::EventHandler(this, &MyForm::btnSecuencial_Click);
-			// 
-			// btnHash
-			// 
-			this->btnHash->Location = System::Drawing::Point(102, 312);
-			this->btnHash->Name = L"btnHash";
-			this->btnHash->Size = System::Drawing::Size(75, 23);
-			this->btnHash->TabIndex = 6;
-			this->btnHash->Text = L"Buscar";
-			this->btnHash->UseVisualStyleBackColor = true;
-			this->btnHash->Click += gcnew System::EventHandler(this, &MyForm::btnHash_Click);
 			// 
 			// btnBinaria
 			// 
@@ -319,6 +281,50 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(3, 117);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(109, 13);
+			this->label11->TabIndex = 19;
+			this->label11->Text = L"Búsqueda secuencial";
+			// 
+			// lbl3
+			// 
+			this->lbl3->AutoSize = true;
+			this->lbl3->Location = System::Drawing::Point(183, 317);
+			this->lbl3->Name = L"lbl3";
+			this->lbl3->Size = System::Drawing::Size(16, 13);
+			this->lbl3->TabIndex = 11;
+			this->lbl3->Text = L"---";
+			// 
+			// btnHash
+			// 
+			this->btnHash->Location = System::Drawing::Point(102, 312);
+			this->btnHash->Name = L"btnHash";
+			this->btnHash->Size = System::Drawing::Size(75, 23);
+			this->btnHash->TabIndex = 6;
+			this->btnHash->Text = L"Buscar";
+			this->btnHash->UseVisualStyleBackColor = true;
+			this->btnHash->Click += gcnew System::EventHandler(this, &MyForm::btnHash_Click);
+			// 
+			// txtHash
+			// 
+			this->txtHash->Location = System::Drawing::Point(6, 312);
+			this->txtHash->Name = L"txtHash";
+			this->txtHash->Size = System::Drawing::Size(90, 20);
+			this->txtHash->TabIndex = 9;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(3, 286);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(99, 13);
+			this->label9->TabIndex = 17;
+			this->label9->Text = L"Búsqueda por hash";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -368,7 +374,6 @@ namespace LAB7AngelCastillo1172920 {
 
 		   void insertinHash(int n, int size)
 		   {
-			   int i = 0;
 			   int clave = claveHash(n, size);
 			   bool added = false;
 			   while (added != true)
@@ -380,31 +385,12 @@ namespace LAB7AngelCastillo1172920 {
 				   }
 				   else
 				   {
-					   if (i == 0)
-					   {
-						   if (clave > 0)
-							   clave = claveHash(n + clave, size);
-						   else
-						   {
-							   clave = claveHash(size + n + i, size);
-							   i++;
-						   }
-					   }
-					   else
-					   {
-						   if (clave > 0)
-						   {
-							   clave = claveHash((n + clave) ^ i, size);
-							   i++;
-						   }
-							   
-						   else
-						   {
-							   clave = claveHash((size + n + i)^2, size);
-							   i++;
-						   }
-					   }
-					   
+					 if (clave > 0)
+						clave = claveHash(n + clave, size);
+					 else
+				     {
+					    clave = claveHash(size + n^2, size);
+				     }
 					   
 				   }
 					   
@@ -456,25 +442,8 @@ namespace LAB7AngelCastillo1172920 {
 		   {
 			   int clave;
 			   clave = n % size;
-			   bool validKey = false;
-			   while (validKey != true)
-			   {
-				   if (clave >= size)
-				   {
-					   clave = (clave / 2);
-				   }
-				   else if (clave < 0)
-				   {
-					   clave = (clave + size);
-				   }
-				   else
-				   {
-					   return clave;
-					   validKey = true;
-				   }
-
-			   }
-			 
+			   clave = clave * n;
+			   return clave;
 				  
 		   }
 
@@ -523,50 +492,32 @@ namespace LAB7AngelCastillo1172920 {
 			   return -1;
 		   }
 
-		   int busquedaHash(int n, int size)
+		   int busquedaHash(int n, int size, int clave)
 		   {
 			   int i = 0;
-			   int clave = claveHash(n, size);
+			   int numero;
 			   while (i < size)
 			   {
-
-				   if (newHash[clave] == n)
+				   numero = Convert::ToInt32(newHash[clave]);
+				   if (numero == n)
 				   {
-					   MessageBox::Show("Vete alv un uxas");
+					   return clave;
 				   }
 				   else
 				   {
-					   if (i == 0)
-					   {
-						   if (clave > 0)
-							   clave = claveHash(n + clave, size);
-						   else
-						   {
-							   clave = claveHash(size + n + i, size);
-							   i++;
-						   }
-					   }
+					   if (clave > 0)
+						   clave = claveHash(n + clave, size);
 					   else
 					   {
-						   if (clave > 0)
-						   {
-							   clave = claveHash((n + clave) ^ i, size);
-							   i++;
-						   }
-
-						   else
-						   {
-							   clave = claveHash((size + n + i) ^ 2, size);
-							   i++;
-						   }
-
+						   clave = claveHash(size + n ^ 2, size);
 					   }
-				   }
-			   }
-			   
-			   return -1;
 
+				   }
+				   i++;
+			   }
+			   return -1;
 		   }
+
 private: System::Void btnSecuencial_Click(System::Object^ sender, System::EventArgs^ e) {
 	Stopwatch^ time = gcnew Stopwatch();
 	try
@@ -624,6 +575,7 @@ private: System::Void btnBinaria_Click(System::Object^ sender, System::EventArgs
 		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 }
+
 private: System::Void btnHash_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	Stopwatch^ time = gcnew Stopwatch();
@@ -631,8 +583,10 @@ private: System::Void btnHash_Click(System::Object^ sender, System::EventArgs^ e
 	try
 	{
 		time->Start();
+		
 		int search = Convert::ToInt32(txtHash->Text);
-		int searched = busquedaHash(search, newHash->Count);
+		int clave = claveHash(search, newHash->Count);
+		int searched = busquedaHash(search, newHash->Count, clave);
 		if (searched == -1)
 		{
 			time->Stop();
@@ -643,7 +597,7 @@ private: System::Void btnHash_Click(System::Object^ sender, System::EventArgs^ e
 		{
 			time->Stop();
 			lbl3->Text = Convert::ToString(time->Elapsed);
-			MessageBox::Show("El número se encontró en la posición: " + searched + " del arreglo ordenado", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			MessageBox::Show("El número se encontró en la posición: " + searched + " del la tabla hash", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 
 
@@ -652,7 +606,6 @@ private: System::Void btnHash_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
-
 
 }
 };
