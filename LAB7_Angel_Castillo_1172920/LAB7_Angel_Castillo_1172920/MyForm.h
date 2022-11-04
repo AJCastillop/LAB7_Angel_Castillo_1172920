@@ -30,6 +30,38 @@ namespace LAB7AngelCastillo1172920 {
 	private: System::Windows::Forms::Label^ lbl3;
 	private: System::Windows::Forms::TextBox^ txtHash;
 	private: System::Windows::Forms::Button^ btnHash;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Button^ btnInicializar;
+	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::Button^ btnActualizar;
+	private: System::Windows::Forms::GroupBox^ groupBoxCuadrado;
+	private: System::Windows::Forms::Button^ btnCuadrado;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::TextBox^ txtLadoC;
+	private: System::Windows::Forms::TextBox^ txtColorC;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::GroupBox^ groupBoxRectangulo;
+	private: System::Windows::Forms::Button^ btnRectangulo;
+	private: System::Windows::Forms::TextBox^ txtAlturaR;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::TextBox^ txtBaseR;
+	private: System::Windows::Forms::TextBox^ txtColorR;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::GroupBox^ groupBoxTriangulo;
+	private: System::Windows::Forms::Button^ btnTriangulo;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ txtColorT;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::TextBox^ txtBaseT;
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::Windows::Forms::TextBox^ txtLadoT;
 
 	public:
 
@@ -98,27 +130,63 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->lbl1 = (gcnew System::Windows::Forms::Label());
 			this->lbl2 = (gcnew System::Windows::Forms::Label());
+			this->lbl3 = (gcnew System::Windows::Forms::Label());
+			this->txtHash = (gcnew System::Windows::Forms::TextBox());
 			this->txtBinaria = (gcnew System::Windows::Forms::TextBox());
 			this->txtSecuencial = (gcnew System::Windows::Forms::TextBox());
 			this->btnSecuencial = (gcnew System::Windows::Forms::Button());
+			this->btnHash = (gcnew System::Windows::Forms::Button());
 			this->btnBinaria = (gcnew System::Windows::Forms::Button());
 			this->btnArray = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->txtArray = (gcnew System::Windows::Forms::TextBox());
 			this->lbArray = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->lbl3 = (gcnew System::Windows::Forms::Label());
-			this->btnHash = (gcnew System::Windows::Forms::Button());
-			this->txtHash = (gcnew System::Windows::Forms::TextBox());
-			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->btnInicializar = (gcnew System::Windows::Forms::Button());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->btnActualizar = (gcnew System::Windows::Forms::Button());
+			this->groupBoxCuadrado = (gcnew System::Windows::Forms::GroupBox());
+			this->btnCuadrado = (gcnew System::Windows::Forms::Button());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->txtLadoC = (gcnew System::Windows::Forms::TextBox());
+			this->txtColorC = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->groupBoxRectangulo = (gcnew System::Windows::Forms::GroupBox());
+			this->btnRectangulo = (gcnew System::Windows::Forms::Button());
+			this->txtAlturaR = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->txtBaseR = (gcnew System::Windows::Forms::TextBox());
+			this->txtColorR = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->groupBoxTriangulo = (gcnew System::Windows::Forms::GroupBox());
+			this->btnTriangulo = (gcnew System::Windows::Forms::Button());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->txtColorT = (gcnew System::Windows::Forms::TextBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->txtBaseT = (gcnew System::Windows::Forms::TextBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->txtLadoT = (gcnew System::Windows::Forms::TextBox());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			this->tabPage2->SuspendLayout();
+			this->groupBoxCuadrado->SuspendLayout();
+			this->groupBoxRectangulo->SuspendLayout();
+			this->groupBoxTriangulo->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -167,6 +235,15 @@ namespace LAB7AngelCastillo1172920 {
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(3, 117);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(109, 13);
+			this->label11->TabIndex = 19;
+			this->label11->Text = L"Búsqueda secuencial";
+			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
@@ -175,6 +252,15 @@ namespace LAB7AngelCastillo1172920 {
 			this->label10->Size = System::Drawing::Size(89, 13);
 			this->label10->TabIndex = 18;
 			this->label10->Text = L"Búsqueda binaria";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(3, 286);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(99, 13);
+			this->label9->TabIndex = 17;
+			this->label9->Text = L"Búsqueda por hash";
 			// 
 			// label8
 			// 
@@ -203,6 +289,22 @@ namespace LAB7AngelCastillo1172920 {
 			this->lbl2->TabIndex = 12;
 			this->lbl2->Text = L"---";
 			// 
+			// lbl3
+			// 
+			this->lbl3->AutoSize = true;
+			this->lbl3->Location = System::Drawing::Point(183, 317);
+			this->lbl3->Name = L"lbl3";
+			this->lbl3->Size = System::Drawing::Size(16, 13);
+			this->lbl3->TabIndex = 11;
+			this->lbl3->Text = L"---";
+			// 
+			// txtHash
+			// 
+			this->txtHash->Location = System::Drawing::Point(6, 312);
+			this->txtHash->Name = L"txtHash";
+			this->txtHash->Size = System::Drawing::Size(90, 20);
+			this->txtHash->TabIndex = 9;
+			// 
 			// txtBinaria
 			// 
 			this->txtBinaria->Location = System::Drawing::Point(6, 234);
@@ -226,6 +328,16 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnSecuencial->Text = L"Buscar";
 			this->btnSecuencial->UseVisualStyleBackColor = true;
 			this->btnSecuencial->Click += gcnew System::EventHandler(this, &MyForm::btnSecuencial_Click);
+			// 
+			// btnHash
+			// 
+			this->btnHash->Location = System::Drawing::Point(102, 312);
+			this->btnHash->Name = L"btnHash";
+			this->btnHash->Size = System::Drawing::Size(75, 23);
+			this->btnHash->TabIndex = 6;
+			this->btnHash->Text = L"Buscar";
+			this->btnHash->UseVisualStyleBackColor = true;
+			this->btnHash->Click += gcnew System::EventHandler(this, &MyForm::btnHash_Click);
 			// 
 			// btnBinaria
 			// 
@@ -273,57 +385,351 @@ namespace LAB7AngelCastillo1172920 {
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->label15);
+			this->tabPage2->Controls->Add(this->label14);
+			this->tabPage2->Controls->Add(this->label2);
+			this->tabPage2->Controls->Add(this->label3);
+			this->tabPage2->Controls->Add(this->label4);
+			this->tabPage2->Controls->Add(this->btnInicializar);
+			this->tabPage2->Controls->Add(this->listBox1);
+			this->tabPage2->Controls->Add(this->btnActualizar);
+			this->tabPage2->Controls->Add(this->groupBoxCuadrado);
+			this->tabPage2->Controls->Add(this->groupBoxRectangulo);
+			this->tabPage2->Controls->Add(this->groupBoxTriangulo);
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage2->Size = System::Drawing::Size(505, 476);
 			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"tabPage2";
+			this->tabPage2->Text = L"Ejercicio 2";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// label11
+			// label15
 			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(3, 117);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(109, 13);
-			this->label11->TabIndex = 19;
-			this->label11->Text = L"Búsqueda secuencial";
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(386, 298);
+			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(53, 13);
+			this->label15->TabIndex = 33;
+			this->label15->Text = L"Perímetro";
 			// 
-			// lbl3
+			// label14
 			// 
-			this->lbl3->AutoSize = true;
-			this->lbl3->Location = System::Drawing::Point(183, 317);
-			this->lbl3->Name = L"lbl3";
-			this->lbl3->Size = System::Drawing::Size(16, 13);
-			this->lbl3->TabIndex = 11;
-			this->lbl3->Text = L"---";
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(307, 298);
+			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(29, 13);
+			this->label14->TabIndex = 32;
+			this->label14->Text = L"Área";
 			// 
-			// btnHash
+			// label2
 			// 
-			this->btnHash->Location = System::Drawing::Point(102, 312);
-			this->btnHash->Name = L"btnHash";
-			this->btnHash->Size = System::Drawing::Size(75, 23);
-			this->btnHash->TabIndex = 6;
-			this->btnHash->Text = L"Buscar";
-			this->btnHash->UseVisualStyleBackColor = true;
-			this->btnHash->Click += gcnew System::EventHandler(this, &MyForm::btnHash_Click);
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(223, 298);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(31, 13);
+			this->label2->TabIndex = 31;
+			this->label2->Text = L"Color";
 			// 
-			// txtHash
+			// label3
 			// 
-			this->txtHash->Location = System::Drawing::Point(6, 312);
-			this->txtHash->Name = L"txtHash";
-			this->txtHash->Size = System::Drawing::Size(90, 20);
-			this->txtHash->TabIndex = 9;
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(115, 298);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(72, 13);
+			this->label3->TabIndex = 30;
+			this->label3->Text = L"Tipo de figura";
 			// 
-			// label9
+			// label4
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(3, 286);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(99, 13);
-			this->label9->TabIndex = 17;
-			this->label9->Text = L"Búsqueda por hash";
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(71, 298);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(18, 13);
+			this->label4->TabIndex = 29;
+			this->label4->Text = L"ID";
+			// 
+			// btnInicializar
+			// 
+			this->btnInicializar->Location = System::Drawing::Point(15, 258);
+			this->btnInicializar->Margin = System::Windows::Forms::Padding(2);
+			this->btnInicializar->Name = L"btnInicializar";
+			this->btnInicializar->Size = System::Drawing::Size(137, 20);
+			this->btnInicializar->TabIndex = 28;
+			this->btnInicializar->Text = L"Inicializar lista (Resetear)";
+			this->btnInicializar->UseVisualStyleBackColor = true;
+			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->Location = System::Drawing::Point(49, 314);
+			this->listBox1->Margin = System::Windows::Forms::Padding(2);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(406, 147);
+			this->listBox1->TabIndex = 27;
+			// 
+			// btnActualizar
+			// 
+			this->btnActualizar->Location = System::Drawing::Point(356, 258);
+			this->btnActualizar->Margin = System::Windows::Forms::Padding(2);
+			this->btnActualizar->Name = L"btnActualizar";
+			this->btnActualizar->Size = System::Drawing::Size(137, 20);
+			this->btnActualizar->TabIndex = 26;
+			this->btnActualizar->Text = L"Actualizar la lista";
+			this->btnActualizar->UseVisualStyleBackColor = true;
+			// 
+			// groupBoxCuadrado
+			// 
+			this->groupBoxCuadrado->Controls->Add(this->btnCuadrado);
+			this->groupBoxCuadrado->Controls->Add(this->label13);
+			this->groupBoxCuadrado->Controls->Add(this->txtLadoC);
+			this->groupBoxCuadrado->Controls->Add(this->txtColorC);
+			this->groupBoxCuadrado->Controls->Add(this->label17);
+			this->groupBoxCuadrado->Location = System::Drawing::Point(367, 10);
+			this->groupBoxCuadrado->Margin = System::Windows::Forms::Padding(2);
+			this->groupBoxCuadrado->Name = L"groupBoxCuadrado";
+			this->groupBoxCuadrado->Padding = System::Windows::Forms::Padding(2);
+			this->groupBoxCuadrado->Size = System::Drawing::Size(133, 244);
+			this->groupBoxCuadrado->TabIndex = 25;
+			this->groupBoxCuadrado->TabStop = false;
+			this->groupBoxCuadrado->Text = L"Cuadrado";
+			// 
+			// btnCuadrado
+			// 
+			this->btnCuadrado->Location = System::Drawing::Point(36, 202);
+			this->btnCuadrado->Margin = System::Windows::Forms::Padding(2);
+			this->btnCuadrado->Name = L"btnCuadrado";
+			this->btnCuadrado->Size = System::Drawing::Size(71, 25);
+			this->btnCuadrado->TabIndex = 14;
+			this->btnCuadrado->Text = L"Agregar";
+			this->btnCuadrado->UseVisualStyleBackColor = true;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(7, 169);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(31, 13);
+			this->label13->TabIndex = 21;
+			this->label13->Text = L"Color";
+			// 
+			// txtLadoC
+			// 
+			this->txtLadoC->Location = System::Drawing::Point(34, 62);
+			this->txtLadoC->Margin = System::Windows::Forms::Padding(2);
+			this->txtLadoC->Name = L"txtLadoC";
+			this->txtLadoC->Size = System::Drawing::Size(60, 20);
+			this->txtLadoC->TabIndex = 13;
+			// 
+			// txtColorC
+			// 
+			this->txtColorC->Location = System::Drawing::Point(42, 167);
+			this->txtColorC->Margin = System::Windows::Forms::Padding(2);
+			this->txtColorC->Name = L"txtColorC";
+			this->txtColorC->Size = System::Drawing::Size(84, 20);
+			this->txtColorC->TabIndex = 20;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(7, 46);
+			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(121, 13);
+			this->label17->TabIndex = 15;
+			this->label17->Text = L"Logitud de los dos lados";
+			// 
+			// groupBoxRectangulo
+			// 
+			this->groupBoxRectangulo->Controls->Add(this->btnRectangulo);
+			this->groupBoxRectangulo->Controls->Add(this->txtAlturaR);
+			this->groupBoxRectangulo->Controls->Add(this->label7);
+			this->groupBoxRectangulo->Controls->Add(this->txtBaseR);
+			this->groupBoxRectangulo->Controls->Add(this->txtColorR);
+			this->groupBoxRectangulo->Controls->Add(this->label12);
+			this->groupBoxRectangulo->Controls->Add(this->label5);
+			this->groupBoxRectangulo->Location = System::Drawing::Point(181, 10);
+			this->groupBoxRectangulo->Margin = System::Windows::Forms::Padding(2);
+			this->groupBoxRectangulo->Name = L"groupBoxRectangulo";
+			this->groupBoxRectangulo->Padding = System::Windows::Forms::Padding(2);
+			this->groupBoxRectangulo->Size = System::Drawing::Size(134, 244);
+			this->groupBoxRectangulo->TabIndex = 24;
+			this->groupBoxRectangulo->TabStop = false;
+			this->groupBoxRectangulo->Text = L"Rectángulo";
+			// 
+			// btnRectangulo
+			// 
+			this->btnRectangulo->Location = System::Drawing::Point(36, 202);
+			this->btnRectangulo->Margin = System::Windows::Forms::Padding(2);
+			this->btnRectangulo->Name = L"btnRectangulo";
+			this->btnRectangulo->Size = System::Drawing::Size(75, 25);
+			this->btnRectangulo->TabIndex = 14;
+			this->btnRectangulo->Text = L"Agregar";
+			this->btnRectangulo->UseVisualStyleBackColor = true;
+			// 
+			// txtAlturaR
+			// 
+			this->txtAlturaR->Location = System::Drawing::Point(36, 125);
+			this->txtAlturaR->Margin = System::Windows::Forms::Padding(2);
+			this->txtAlturaR->Name = L"txtAlturaR";
+			this->txtAlturaR->Size = System::Drawing::Size(60, 20);
+			this->txtAlturaR->TabIndex = 17;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(7, 169);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(31, 13);
+			this->label7->TabIndex = 21;
+			this->label7->Text = L"Color";
+			// 
+			// txtBaseR
+			// 
+			this->txtBaseR->Location = System::Drawing::Point(36, 62);
+			this->txtBaseR->Margin = System::Windows::Forms::Padding(2);
+			this->txtBaseR->Name = L"txtBaseR";
+			this->txtBaseR->Size = System::Drawing::Size(60, 20);
+			this->txtBaseR->TabIndex = 13;
+			// 
+			// txtColorR
+			// 
+			this->txtColorR->Location = System::Drawing::Point(42, 167);
+			this->txtColorR->Margin = System::Windows::Forms::Padding(2);
+			this->txtColorR->Name = L"txtColorR";
+			this->txtColorR->Size = System::Drawing::Size(84, 20);
+			this->txtColorR->TabIndex = 20;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(15, 32);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(94, 13);
+			this->label12->TabIndex = 15;
+			this->label12->Text = L"Logitud de la base";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(15, 102);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(97, 13);
+			this->label5->TabIndex = 18;
+			this->label5->Text = L"Logitud de la altura";
+			// 
+			// groupBoxTriangulo
+			// 
+			this->groupBoxTriangulo->Controls->Add(this->btnTriangulo);
+			this->groupBoxTriangulo->Controls->Add(this->label6);
+			this->groupBoxTriangulo->Controls->Add(this->txtColorT);
+			this->groupBoxTriangulo->Controls->Add(this->label16);
+			this->groupBoxTriangulo->Controls->Add(this->label18);
+			this->groupBoxTriangulo->Controls->Add(this->txtBaseT);
+			this->groupBoxTriangulo->Controls->Add(this->label19);
+			this->groupBoxTriangulo->Controls->Add(this->label20);
+			this->groupBoxTriangulo->Controls->Add(this->txtLadoT);
+			this->groupBoxTriangulo->Location = System::Drawing::Point(5, 10);
+			this->groupBoxTriangulo->Margin = System::Windows::Forms::Padding(2);
+			this->groupBoxTriangulo->Name = L"groupBoxTriangulo";
+			this->groupBoxTriangulo->Padding = System::Windows::Forms::Padding(2);
+			this->groupBoxTriangulo->Size = System::Drawing::Size(130, 244);
+			this->groupBoxTriangulo->TabIndex = 23;
+			this->groupBoxTriangulo->TabStop = false;
+			this->groupBoxTriangulo->Text = L"Triángulo";
+			// 
+			// btnTriangulo
+			// 
+			this->btnTriangulo->Location = System::Drawing::Point(36, 202);
+			this->btnTriangulo->Margin = System::Windows::Forms::Padding(2);
+			this->btnTriangulo->Name = L"btnTriangulo";
+			this->btnTriangulo->Size = System::Drawing::Size(71, 25);
+			this->btnTriangulo->TabIndex = 6;
+			this->btnTriangulo->Text = L"Agregar";
+			this->btnTriangulo->UseVisualStyleBackColor = true;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(7, 169);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(31, 13);
+			this->label6->TabIndex = 12;
+			this->label6->Text = L"Color";
+			// 
+			// txtColorT
+			// 
+			this->txtColorT->Location = System::Drawing::Point(42, 167);
+			this->txtColorT->Margin = System::Windows::Forms::Padding(2);
+			this->txtColorT->Name = L"txtColorT";
+			this->txtColorT->Size = System::Drawing::Size(84, 20);
+			this->txtColorT->TabIndex = 11;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(44, 115);
+			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(48, 13);
+			this->label16->TabIndex = 10;
+			this->label16->Text = L"diferente";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(23, 102);
+			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(82, 13);
+			this->label18->TabIndex = 9;
+			this->label18->Text = L"Logitud del lado";
+			// 
+			// txtBaseT
+			// 
+			this->txtBaseT->Location = System::Drawing::Point(33, 136);
+			this->txtBaseT->Margin = System::Windows::Forms::Padding(2);
+			this->txtBaseT->Name = L"txtBaseT";
+			this->txtBaseT->Size = System::Drawing::Size(60, 20);
+			this->txtBaseT->TabIndex = 8;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(44, 46);
+			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(40, 13);
+			this->label19->TabIndex = 7;
+			this->label19->Text = L"iguales";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(7, 32);
+			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(121, 13);
+			this->label20->TabIndex = 6;
+			this->label20->Text = L"Logitud de los dos lados";
+			// 
+			// txtLadoT
+			// 
+			this->txtLadoT->Location = System::Drawing::Point(33, 62);
+			this->txtLadoT->Margin = System::Windows::Forms::Padding(2);
+			this->txtLadoT->Name = L"txtLadoT";
+			this->txtLadoT->Size = System::Drawing::Size(60, 20);
+			this->txtLadoT->TabIndex = 0;
 			// 
 			// MyForm
 			// 
@@ -337,6 +743,14 @@ namespace LAB7AngelCastillo1172920 {
 			this->tabPage1->ResumeLayout(false);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->tabPage2->ResumeLayout(false);
+			this->tabPage2->PerformLayout();
+			this->groupBoxCuadrado->ResumeLayout(false);
+			this->groupBoxCuadrado->PerformLayout();
+			this->groupBoxRectangulo->ResumeLayout(false);
+			this->groupBoxRectangulo->PerformLayout();
+			this->groupBoxTriangulo->ResumeLayout(false);
+			this->groupBoxTriangulo->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
