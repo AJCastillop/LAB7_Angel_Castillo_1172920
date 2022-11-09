@@ -461,7 +461,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnInicializar->Name = L"btnInicializar";
 			this->btnInicializar->Size = System::Drawing::Size(137, 20);
 			this->btnInicializar->TabIndex = 28;
-			this->btnInicializar->Text = L"Inicializar lista (Resetear)";
+			this->btnInicializar->Text = L"Vaciar Lista";
 			this->btnInicializar->UseVisualStyleBackColor = true;
 			// 
 			// listBox1
