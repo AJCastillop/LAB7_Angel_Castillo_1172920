@@ -11,7 +11,7 @@ protected:
 
 public:
 
-	SetPolígono(string figura, string color, int id)
+	Poligono(string figura, string color, int id)
 	{
 		this->figura = figura;
 		this->color = color;
@@ -19,6 +19,23 @@ public:
 	}
 
 	virtual double Poligono::CalcArea() = 0;
+	virtual double Poligono::CalcPerimetro() = 0;
+
+	virtual string getColor()
+	{
+		return "";
+	}
+
+	virtual string getfigura()
+	{
+		return "";
+	}
+
+	virtual int getid()
+	{
+		return 0;
+	}
+	
 
 };
 

@@ -124,6 +124,8 @@
     <ClCompile Include="List.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Polígonos.cpp" />
+    <ClCompile Include="RECTANGULO.cpp" />
+    <ClCompile Include="TRIANGULO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h" />
@@ -131,6 +133,8 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Polígonos.h" />
+    <ClInclude Include="RECTANGULO.h" />
+    <ClInclude Include="TRIANGULO.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
