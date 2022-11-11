@@ -1135,6 +1135,7 @@ private: System::Void btnInicializar_Click(System::Object^ sender, System::Event
 
 	listPoligonos->clear();
 	showlist();
+	id = id * 0;
 }
 };
 }
