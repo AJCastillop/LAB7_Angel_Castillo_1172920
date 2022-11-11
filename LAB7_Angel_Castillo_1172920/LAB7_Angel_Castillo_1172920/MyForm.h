@@ -476,6 +476,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnInicializar->TabIndex = 28;
 			this->btnInicializar->Text = L"Vaciar Lista";
 			this->btnInicializar->UseVisualStyleBackColor = true;
+			this->btnInicializar->Click += gcnew System::EventHandler(this, &MyForm::btnInicializar_Click);
 			// 
 			// listBox1
 			// 
@@ -1129,6 +1130,11 @@ private: System::Void btnActualizar_Click(System::Object^ sender, System::EventA
 		showlist();
 	else
 		MessageBox::Show("La lista esta vacía", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+}
+private: System::Void btnInicializar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	listPoligonos->clear();
+	showlist();
 }
 };
 }
