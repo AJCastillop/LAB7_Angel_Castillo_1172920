@@ -5,37 +5,29 @@ using std::string;
 class Poligono
 {
 protected:
-	int id;
-	string color;
 	string figura;
+	string color;
+	int ID;
+
 
 public:
 
-	Poligono(string figura, string color, int id)
-	{
+	Poligono(string figura, string color, int ID) {
 		this->figura = figura;
 		this->color = color;
-		this->id = id;
+		this->ID = ID;
 	}
+	virtual double calcularArea() = 0;
+	virtual double calcularPerimetro() = 0;
 
-	virtual double Poligono::CalcArea() = 0;
-	virtual double Poligono::CalcPerimetro() = 0;
-
-	virtual string getColor()
-	{
+	virtual string getColor() {
 		return "";
 	}
-
-	virtual string getfigura()
-	{
-		return "";
-	}
-
-	virtual int getid()
-	{
+	virtual int id() {
 		return 0;
 	}
-	
-
+	virtual string getFigura() {
+		return "";
+	}
 };
 

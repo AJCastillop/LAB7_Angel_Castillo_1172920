@@ -1,10 +1,16 @@
 #pragma once
+#include "Polígonos.h"
 #include <stdio.h>
 #include <Windows.h>
 #include<time.h>;
 #include <stdlib.h>
 #include<iostream>
 #include<cstdlib>
+#include <msclr/marshal_cppstd.h>
+#include "ListP.h"
+#include "CUADRADO.h"
+#include "TRIANGULO.h"
+#include "RECTANGULO.h"
 
 namespace LAB7AngelCastillo1172920 {
 
@@ -23,7 +29,10 @@ namespace LAB7AngelCastillo1172920 {
 	{
 	public:
 
-		int *arreglo;
+		
+		int id;
+		
+
 	private: System::Windows::Forms::Label^ label11;
 	public:
 	private: System::Windows::Forms::Label^ label9;
@@ -66,6 +75,9 @@ namespace LAB7AngelCastillo1172920 {
 	public:
 
 	public:
+		int* arreglo;
+		Hashtable^ newHash = gcnew Hashtable();
+		ListP<Poligono>* listPoligonos;
 		int* arreglo2;
 
 		MyForm(void)
@@ -74,6 +86,7 @@ namespace LAB7AngelCastillo1172920 {
 			//
 			//TODO: agregar código de constructor aquí
 			//
+			listPoligonos = new ListP<Poligono>();
 		}
 
 	protected:
@@ -482,6 +495,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnActualizar->TabIndex = 26;
 			this->btnActualizar->Text = L"Actualizar la lista";
 			this->btnActualizar->UseVisualStyleBackColor = true;
+			this->btnActualizar->Click += gcnew System::EventHandler(this, &MyForm::btnActualizar_Click);
 			// 
 			// groupBoxCuadrado
 			// 
@@ -508,6 +522,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnCuadrado->TabIndex = 14;
 			this->btnCuadrado->Text = L"Agregar";
 			this->btnCuadrado->UseVisualStyleBackColor = true;
+			this->btnCuadrado->Click += gcnew System::EventHandler(this, &MyForm::btnCuadrado_Click);
 			// 
 			// label13
 			// 
@@ -572,6 +587,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnRectangulo->TabIndex = 14;
 			this->btnRectangulo->Text = L"Agregar";
 			this->btnRectangulo->UseVisualStyleBackColor = true;
+			this->btnRectangulo->Click += gcnew System::EventHandler(this, &MyForm::btnRectangulo_Click);
 			// 
 			// txtAlturaR
 			// 
@@ -656,6 +672,7 @@ namespace LAB7AngelCastillo1172920 {
 			this->btnTriangulo->TabIndex = 6;
 			this->btnTriangulo->Text = L"Agregar";
 			this->btnTriangulo->UseVisualStyleBackColor = true;
+			this->btnTriangulo->Click += gcnew System::EventHandler(this, &MyForm::btnTriangulo_Click);
 			// 
 			// label6
 			// 
@@ -755,7 +772,7 @@ namespace LAB7AngelCastillo1172920 {
 
 		}
 #pragma endregion
-		Hashtable^ newHash = gcnew Hashtable();
+		
 
 	private: System::Void btnArray_Click(System::Object^ sender, System::EventArgs^ e) {
 		try
@@ -1021,6 +1038,97 @@ private: System::Void btnHash_Click(System::Object^ sender, System::EventArgs^ e
 		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 
+}
+private: System::Void btnTriangulo_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	try
+	{
+		int base = Convert::ToInt32(txtBaseT->Text);
+		int lado = Convert::ToInt32(txtLadoT->Text);
+		String^ color = txtColorT->Text;
+		string _color = msclr::interop::marshal_as<string>(color);
+		string figura = "Triangulo";
+		int ID = 1000 + id;
+		TRIANGULO* newTriangulo = new TRIANGULO(figura, _color, ID, base, lado);
+		listPoligonos->add(newTriangulo);
+		id++;
+		MessageBox::Show("El triangulo se ingresó correctamente", ":)", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	}
+	catch (Exception^ e)
+	{
+		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+}
+private: System::Void btnRectangulo_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	try
+	{
+		int base = Convert::ToInt32(txtBaseR->Text);
+		int altura = Convert::ToInt32(txtAlturaR->Text);
+		String^ color = txtColorR->Text;
+		string _color = msclr::interop::marshal_as<string>(color);
+		string figura = "Rectángulo";
+		int ID = 2000 + id;
+		RECTANGULO* newRectangulo = new RECTANGULO(figura, _color, ID, base, altura);
+		listPoligonos->add(newRectangulo);
+		id++;
+		MessageBox::Show("El rectángulo se ingresó correctamente", ":)", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	}
+	catch (Exception^ e)
+	{
+		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+}
+private: System::Void btnCuadrado_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	try
+	{
+		int base = Convert::ToInt32(txtLadoC->Text);
+		String^ color = txtColorC->Text;
+		string _color = msclr::interop::marshal_as<string>(color);
+		string figura = "Cuadrado";
+		int ID = 3000 + id;
+		CUADRADO* newCuadrado = new CUADRADO(figura, _color, ID, base);
+		listPoligonos->add(newCuadrado);
+		id++;
+		MessageBox::Show("El cuadrado se ingresó correctamente", ":)", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	}
+	catch (Exception^ e)
+	{
+		MessageBox::Show("Error: " + e->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+
+}
+
+	   void showlist()
+	   {
+		   listBox1->Items->Clear();
+		   int contador = 0;
+		   while (listPoligonos->get(contador) != nullptr) {
+			   string Figura;
+			   string Color;
+			   Color = listPoligonos->get(contador)->getColor();
+			   String^ color = gcnew String(Color.c_str());
+			   Figura = listPoligonos->get(contador)->getFigura();
+			   String^ figura = gcnew String(Figura.c_str());
+			   listBox1->Items->Add("        " + listPoligonos->get(contador)->id() + " ----------- " + figura + " ---------------- " + color + " ----------- " + 
+				   (listPoligonos->get(contador)->calcularArea()) + " ------------- " + listPoligonos->get(contador)->calcularPerimetro());
+			   contador++;
+		   }
+
+	   }
+private: System::Void btnActualizar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	if (listPoligonos->getSize() != 0)
+		showlist();
+	else
+		MessageBox::Show("La lista esta vacía", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
 }
 };
 }

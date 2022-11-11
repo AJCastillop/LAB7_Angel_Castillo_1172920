@@ -121,6 +121,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CUADRADO.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Polígonos.cpp" />
@@ -128,7 +129,9 @@
     <ClCompile Include="TRIANGULO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CUADRADO.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="ListP.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

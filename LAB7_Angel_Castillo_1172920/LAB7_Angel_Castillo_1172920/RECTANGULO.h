@@ -12,21 +12,21 @@ public:
         this->base = base;
         this->altura = altura;
     }
-    double calcularArea()
+    double calcularArea()override
     {
         return this->base * this->altura;
     }
-    double calcularPerimetro()
+    double calcularPerimetro()override
     {
         return (2 * this->base) + (2 * this->altura);
     }
-    int getid() {
-        return this->id;
+    int id()override {
+        return this->ID;
     }
-    string getColor() {
+    string getColor() override {
         return this->color;
     }
-    string getFigura() {
+    string getFigura() override {
         return this->figura;
     }
 };
